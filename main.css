@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* *{
+   // font-family: 'League Spartan', sans-serif;
+} */
+
+body{
+     
+    background: #ececec; 
+}
+
+.display{
+   color: #ececec;
+    background: #385170;
+
+}
+#inpt{
+    background: #385170;
+}
+#mainbox{
+    background: #385170;
+    color: #ececec;
+}
+.generateButton{
+    background: #142d4c;
+    color: #ececec;
+    
+}
+.coll{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.copyButton{
+    transform: scale(0);
+    background: #142d4c;
+    color: #ececec;
+    position: absolute;
+    padding: 5px;
+    top: -40px; /* Adjust this value as needed */
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+.active{
+    transform: scale(1);
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="main.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <!-- Top level Container -->
+    <div class="container h-[100vh] flex items-center justify-center font-serif relative mx-auto ">
+        <!-- The center container -->
+        <div class="flex-col items-center relative max-w-[40rem] w-[21rem] sm:w-[27rem]"> 
+            <h1 class="font-extrabold text-[1.8rem] pb-7 text-center">PASSWORD GENERATOR</h1>
+            <!-- Input container and copy -->
+        <div class="w-full h-14 flex items-center my-[16px] p-6  border-4 rounded-xl" id="inpt">     
+         <input readonly placeholder="PASSWORD" class="display w-[400px] text-[20px]" data-passwordDisplay>
+         <button data-copy class="coll">
+            <span data-copyMsg class="copyButton"></span>
+            <i class="fa-regular fa-copy "></i>
+        </button>
+        
+        </div>
+        <!-- Main container -->
+        <div class="w-full flex-col p-5 border-4 h-[350px] rounded-xl space-y-3" id="mainbox">
+            <!-- Password length and Current Length -->
+            <div class="flex justify-between items-center">
+                <h1 class="font-bold text-[1.2rem]">Password Length</h1>
+                <p data-lenghtNumber class="text-[1.2rem]">10</p>
+            </div>
+            <input class="w-full" id="input2" type="range" min="1" max="20" class="slider" step="1" data-lengthSlider>
+            <!-- check Boxex -->
+             <div class="flex-col space-y-3 ">
+                <div> <input type="checkbox" id="UpperCase">
+             <label for="UpperCase">Includes UpperCase Letters</label></div>
+                <div> <input type="checkbox" id="LowerCase">
+             <label for="LowerCase">Includes LowerCase Letters</label></div>
+            <div><input type="checkbox" id="Numbers">
+             <label for="Numbers">Includes Numbers</label></div>
+                <div><input type="checkbox" id="Symbols">
+             <label for="Symbols">Includes Symbols</label></div>   
+            </div>
+            <!-- strength section -->
+            <div class=" flex justify-between items-center">
+                <p class="text-[1.2rem]">Strength</p>
+                <div data-indicator class="rounded-full bg-yellow-300 w-5 h-5"></div>
+            </div>
+             <!-- Generate password -->
+              <button class="generateButton h-9 text-center w-full text-[1.25rem] rounded-lg" >Generate Password</button>
+        </div></div>
+       
+   
+    </div>
+  
+<script src="script.js"></script>
+</body>
+</html>

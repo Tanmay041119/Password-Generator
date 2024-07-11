@@ -104,7 +104,6 @@ btn.addEventListener('click',function(){
     {
         copyToClipboard();
     }
-    console.log(checkCount);
     if(checkCount==0)
         {
             alert('Please Generate Password To Copy');
@@ -157,12 +156,10 @@ generateButton.addEventListener('click',function(){
     }
     for(let i=0;i<passwordLength-funcArr.length;i++){
         let idx=getRandomInteger(0,funcArr.length-1);
-        console.log(idx);
         password+=funcArr[idx]();
     }
     password=shuffleString(password);
     calcStrength();
-   console.log(password);
     dispPassword.value=password;
 }
 )
